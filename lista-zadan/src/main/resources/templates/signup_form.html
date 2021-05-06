@@ -4,31 +4,60 @@
     <meta charset="UTF-8">
     <title>Rejestracja</title>
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
+<style>
+body{
+background: rgb(60,59,89);
+background: linear-gradient(90deg, rgba(60,59,89,1) 0%, rgba(77,125,212,1) 57%);
+}
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+</style>
 <div class="container text-center">
-    <h1> Załóż konto</h1>
+ <div class="row centered-form text-center justify-content-center">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 600px;">
+	<h2 class="card-title mt-3 text-center">Załóż konto</h2>
+	<p class="text-center">To całkowicie darmowe</p>
 
 <form th:action="@{/process_register}" method="post"
     style="max-width: 600px; margin: 0 auto;"
       th:object="${user}">
     <div>
         <div class="form-group row">
-            <label class="col-form-label col-4">Login</label>
-            <input type="text" class="form-control" th:field="*{login}" required
+            <input type="text" class="form-control" placeholder="login" th:field="*{login}" required
             minlength="2" maxlength="30"/>
         </div>
         <div class="form-group row">
-            <label class="col-form-label col-4">Password</label>
-            <input type="password" class="form-control" th:field="*{password}" required
+            <input type="password" class="form-control" placeholder="hasło" th:field="*{password}" required
             minlength="4" maxlength="50"/>
         </div>
     </div>
     <button type="submit" class="btn btn-primary">Rejestruj </button>
 </form>
-<div>
-    <h3><a th:href="@{/register}"> Logowanie</a></h3>
+<hr>
+	<p>Masz już konto? </p>
+	<a class="btn btn-primary btn-sm" th:href="@{/login}" role="button" data-toggle="tooltip" title="Opcje" style="color:white;">Zaloguj się</a>
+</article>
+
+</div> 
 </div>
+</div>
+
 </div>
 </body>
 </html>
