@@ -1,0 +1,93 @@
+
+html {
+      background: -webkit-linear-gradient(to right, #c2d1d3, #265568); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #c2d1d3, #265568); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100%;
+  font-family: roboto;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body
+{
+	background: -webkit-linear-gradient(to right, #c2d1d3, #265568); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #c2d1d3, #265568); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.navbar a
+{
+	color:black;
+}
+.navbar
+{
+	z-index:100;
+}
+.nav-item
+{
+	margin-left: 20px;
+}
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #505050;
+  display: block;
+  margin-top: 10px;
+  font-weight:bold!important;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+
+	color: #505050;
+    text-decoration: none;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin-left:-10px;
+	margin-right: -10px
+
+}
+
+input[type=checkbox]
+{
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+}
+
+.form-check
+{	
+	padding-top: 5px!important;
+	font-size:19px;
+}
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.welcome
+{	
+	margin-top: 1.2em;
+	color:white;
+}
+.tasks 
+{	
+	margin-top: -10px;
+	color: white;
+	margin-bottom:20px;
+}
+hr
+{
+
+  border-top: 2px solid rgba(0, 0, 0, 0.6)!important;
+}
