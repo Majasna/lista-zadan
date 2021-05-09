@@ -33,13 +33,13 @@ public class TDList {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "position_fk", referencedColumnName = "id")
-    List<Position> positions = new ArrayList<>();
+    List<Positions> positions = new ArrayList<>();
 
-    public List<Position> getPositions() {
+    public List<Positions> getPositions() {
         return positions;
     }
 
-    public void setPositions(List<Position> positions) {
+    public void setPositions(List<Positions> positions) {
         this.positions = positions;
     }
 

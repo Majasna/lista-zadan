@@ -1,26 +1,23 @@
 package pl.wsb.students.course.app.model;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "position")
-public class Position {
+@Table(name = "positions")
+public class Positions {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
     private Integer id;
     private String title;
-    private Boolean isDone;
 
-    public Position() {
+    public Positions() {
     }
 
-    public Position(String title) {
+    public Positions(String title) {
         this.title = title;
-        this.isDone = false;
     }
 
     public Integer getId() {
@@ -39,11 +36,4 @@ public class Position {
         this.title = title;
     }
 
-    public Boolean getDone() {
-        return isDone;
-    }
-
-    public void setDone(Boolean done) {
-        isDone = done;
-    }
 }
