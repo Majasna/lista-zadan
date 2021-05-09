@@ -10,7 +10,7 @@ import java.util.List;
 @RequestMapping(value = "/list")
 public class ListController {
     @Autowired
-    private ListRepository todoRepo;
+    private ListRepository listRepository;
 
     @GetMapping
     public List<List> findAll(){
