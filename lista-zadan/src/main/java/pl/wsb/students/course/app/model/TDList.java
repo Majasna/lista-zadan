@@ -5,7 +5,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "list")
-public class List {
+public class TDList {
 
     private Integer id;
     private String title;
@@ -14,11 +14,11 @@ public class List {
     private Date created;
     private Date modified;
 
-    public List(){}
+    public TDList(){}
 
-    public List(Date modified){this.modified = modified;}
+    public TDList(Date modified){this.modified = modified;}
 
-    public List(int id, String title, String description, String listType, Date created, Date modified) {
+    public TDList(int id, String title, String description, String listType, Date created, Date modified) {
         this.id = id;
         this.title = title;
         this.description = description;

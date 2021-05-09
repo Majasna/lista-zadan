@@ -1,8 +1,8 @@
 package pl.wsb.students.course.app.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import pl.wsb.students.course.app.model.List;
+import pl.wsb.students.course.app.model.TDList;
 
 
-public interface ListRepository extends JpaRepository<List,Integer>{
+public interface ListRepository extends JpaRepository<TDList,Integer>{
 }

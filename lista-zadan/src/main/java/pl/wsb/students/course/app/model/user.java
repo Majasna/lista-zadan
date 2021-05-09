@@ -1,8 +1,7 @@
 package pl.wsb.students.course.app.model;
 
-import com.sun.istack.Nullable;
-
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -16,6 +15,10 @@ public class user {
 
     @Column(nullable = false)
     private String password;
+
+    @OneToMany(targetEntity = TDList.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "list_foreign_key", referencedColumnName = "id")
+    private List<TDList> lists;
 
     public Integer getId() {
         return id;
