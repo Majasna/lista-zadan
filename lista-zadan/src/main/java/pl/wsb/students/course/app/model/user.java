@@ -17,7 +17,7 @@ public class user {
     private String password;
 
     @OneToMany(targetEntity = TDList.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "list_foreign_key", referencedColumnName = "id")
+    @JoinColumn(name = "tdlist_foreign_key", referencedColumnName = "id")
     private List<TDList> lists;
 
     public Integer getId() {
