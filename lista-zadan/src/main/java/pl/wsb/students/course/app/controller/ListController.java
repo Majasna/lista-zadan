@@ -15,17 +15,17 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/list")
+@RequestMapping(value = {"/list"})
 public class ListController {
     @Autowired
     private ListRepository ListRepository;
 
-    @GetMapping("")
+    @GetMapping
     public List<TDList> findAll() {
         return ListRepository.findAll();
     }
 
-    @PostMapping()
+    @PostMapping
     public TDList save(@Valid @NotNull @RequestBody TDList list){
         return ListRepository.save(list);
     }
