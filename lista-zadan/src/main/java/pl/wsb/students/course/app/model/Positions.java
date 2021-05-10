@@ -11,9 +11,19 @@ public class Positions {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true, nullable = false)
     private Integer id;
+
+    @Column(name = "title")
     private String title;
 
+    @Column(name = "description")
+    private String description;
+
     public Positions() {
+    }
+
+    public Positions(String title, String description) {
+        this.title = title;
+        this.description = description;
     }
 
     public Positions(String title) {
@@ -34,6 +44,14 @@ public class Positions {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }
