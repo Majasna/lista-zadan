@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "tdlist")
+@Table(name = "list")
 public class TDList {
 
     @Id
