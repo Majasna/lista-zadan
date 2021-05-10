@@ -7,14 +7,11 @@ import pl.wsb.students.course.app.model.TDList;
 
 import java.util.List;
 
-public interface TDListMapper {
+public interface PositionMapper {
     @Mappings({
             @Mapping(target="id", source="entity.id"),
-            @Mapping(target="title", source="entity.title"),
-            @Mapping(target="description", source="entity.description"),
-            @Mapping(target="listType", source="entity.listType"),
-            @Mapping(target="created", source="entity.created"),
-            @Mapping(target="modified", source="entity.modified")
+            @Mapping(target="firstName", source="entity.firstName"),
+            @Mapping(target="lastName", source="entity.lastName")
     })
     TDListDTO tdlistToTDListDTO(TDList entity);
 
