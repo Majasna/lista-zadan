@@ -14,8 +14,8 @@ import pl.wsb.students.course.app.service.CustomUserDetailsService;
 
 import javax.sql.DataSource;
 
-@Configuration
-@EnableWebSecurity
+//@Configuration
+//@EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired

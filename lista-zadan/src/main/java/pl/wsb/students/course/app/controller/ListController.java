@@ -30,9 +30,11 @@ public class ListController {
         return ListRepository.save(list);
     }
 
-    @PutMapping
-    public TDList update(@Valid @NotNull @RequestBody TDList list){
-        return ListRepository.save(list);
+    @PutMapping("/{id}")
+    public TDList update(@Valid @NotNull @RequestBody TDList list, @PathVariable int id){
+        TDList listEntity = ListRepository.findById(id).orElse(null);
+        listEntity.setTitle(list.getTitle());
+        return ListRepository.save(listEntity);
     }
 
     @DeleteMapping(value = "/{id}")

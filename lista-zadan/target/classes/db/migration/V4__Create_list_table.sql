@@ -12,6 +12,7 @@ create table list (
 create table positions (
     id INTEGER NOT NULL auto_increment,
     title VARCHAR(255),
+    description VARCHAR(255),
     listId INTEGER,
     PRIMARY KEY (id),
     FOREIGN KEY (listId) REFERENCES list(id)
