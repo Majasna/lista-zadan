@@ -13,7 +13,7 @@ create table positions (
     id INTEGER NOT NULL auto_increment,
     title VARCHAR(255),
     description VARCHAR(255),
-    listId INTEGER,
+    position_fk INTEGER,
     PRIMARY KEY (id),
-    FOREIGN KEY (listId) REFERENCES list(id)
+    FOREIGN KEY (position_fk) REFERENCES list(id)
 ) engine=InnoDB;

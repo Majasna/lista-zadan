@@ -1,7 +1,11 @@
 package pl.wsb.students.course.app.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "positions")
@@ -17,6 +21,19 @@ public class Positions {
 
     @Column(name = "description")
     private String description;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    @JoinColumn(name = "position_fk", referencedColumnName = "id")
+    private TDList tdList;
+
+    public TDList getTdList() {
+        return tdList;
+    }
+
+    public void setTdList(TDList tdList) {
+        this.tdList = tdList;
+    }
 
     public Positions() {
     }

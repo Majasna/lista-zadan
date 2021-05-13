@@ -31,17 +31,16 @@ public class TDList {
     @Column(name = "modified", length = 19)
     private Date modified;
 
-//    @OneToMany(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "position_fk", referencedColumnName = "id")
-//    List<Positions> positions = new ArrayList<>();
+    @OneToMany(mappedBy = "tdList")
+    List<Positions> positions = new ArrayList<>();
 
-//    public List<Positions> getPositions() {
-//        return positions;
-//    }
-//
-//    public void setPositions(List<Positions> positions) {
-//        this.positions = positions;
-//    }
+    public List<Positions> getPositions() {
+        return positions;
+    }
+
+    public void setPositions(List<Positions> positions) {
+        this.positions = positions;
+    }
 
     public TDList(){}
 
